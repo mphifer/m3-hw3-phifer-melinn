@@ -1,5 +1,6 @@
 @import "variables";
 
+//NESTING
 nav {
   background-color: @yellow;
   ul {
@@ -13,49 +14,87 @@ nav {
   }
 }
 
+section {
+  h2 {
+    font-size: 30px;
+  }
+  span {
+    color: @red;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+//MIXINS
+
+.button-style {
+  background-color: @yellow;
+  border-color: @black;
+  color: @black;
+  border-radius: 8px;
+  font-size: 18px;
+    &:hover {
+      background-color:black;
+    }
+}
+
+.top-border {
+  border-top: 20px solid @yellow;
+}
+
 body {
   font-family: @primary-font;
   color: @black;
-}
-
-h2 {
-  font-size: 30px;
-    span {
-      color: @red;
-      text-transform: uppercase;
-        p {
-          font-size: 16px;
-      }
-    }
 }
 
 h1 {
   display: none;
 }
 
-.jumbotron {
-  background-image: url(../img/banner-bg.png);
-  background-size: cover;
+img {
+  padding: 1%;
 }
 
+//BANNER
+header {
+ .jumbotron {
+  background:
+  linear-gradient(
+     rgba(0, 0, 0, 0.5),
+     rgba(0, 0, 0, 0.5)
+   ),
+   url(../img/banner-bg.png);
+ background-size: cover;
+ max-height: 100vh;
+}
+}
+
+section {
+  padding-bottom: 30px;
+  padding: 2%;
+}
+
+second-section {
+  background-color: @gray;
+}
+
+//BUTTONS
 .btn-primary {
-  background-color: @yellow;
-  border-color: @black;
-  color: @black;
+  .button-style();
   text-transform: capitalize;
-  border-radius: 8px;
-  font-size: 18px;
 }
 
 .btn-secondary {
-  background-color: @yellow;
+  .button-style();
   text-transform: uppercase;
-  color: @black;
-  border-radius: 8px;
-  font-size: 18px;
+
 }
 
+//FOOTER
 footer {
   background-color: @black;
-  padding: 20px;
+  padding: 50px;
+  .top-border();
 }
