@@ -27,23 +27,6 @@ section {
   }
 }
 
-//MIXINS
-
-.button-style {
-  background-color: @yellow;
-  border-color: @black;
-  color: @black;
-  border-radius: 8px;
-  font-size: 18px;
-    &:hover {
-      background-color:black;
-    }
-}
-
-.top-border {
-  border-top: 20px solid @yellow;
-}
-
 body {
   font-family: @primary-font;
   color: @black;
@@ -67,7 +50,7 @@ header {
    ),
    url(../img/banner-bg.png);
  background-size: cover;
- max-height: 100vh;
+ height: 60vh;
 }
 }
 
@@ -82,19 +65,18 @@ second-section {
 
 //BUTTONS
 .btn-primary {
-  .button-style();
+  .button-style();  //mixins
   text-transform: capitalize;
 }
 
 .btn-secondary {
-  .button-style();
+  .button-style();  //mixins
   text-transform: uppercase;
-
 }
 
 //FOOTER
 footer {
   background-color: @black;
   padding: 50px;
-  .top-border();
+  .top-border(); //mixin
 }
