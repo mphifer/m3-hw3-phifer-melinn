@@ -2,7 +2,7 @@
 @gray: #f3f3f3;
 @yellow: #f8df1f;
 @red: #ee252f;
-@black: #080801;
+@black: #050500;
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
@@ -13,10 +13,13 @@
 //MIXINS
 .button-style {
   background-color: @yellow;
-  border-color: @black;
+  padding: 10px 30px 10px 30px;
   color: @black;
+  border-color: @black;
   border-radius: 8px;
   font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
     &:hover {
       background-color:black;
     }
